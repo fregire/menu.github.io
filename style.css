@@ -56,6 +56,8 @@
 	width: 24.95934959349593%;
 }
 .categ__link {
+	position: relative;
+
 	display: inline-block;
 	padding-left: 49px;
 	height: 49px;
@@ -66,15 +68,39 @@
 	line-height: 49px;
 	border-left: 1px solid #4a505f;
 
-	transition: all 400ms;
+	transition: all 100ms;
 }
 .categ__link:hover {
 	background-color: #545c6e;
 	cursor: pointer;
 	border-left: 1px solid #e66a86;
 	color: #e66a86;
+}
+.categ__icon {
+	position: absolute;
+	left: 14px;
+	top: 50%;
+	transform: translate(0, -50%);
+
+	display: block;
+	content: "";
+
+	background-image: url(icon-sprite.png);
+	background-repeat: no-repeat;
 
 }
+
+.categ__link:hover .categ__icon {
+	background-position-y: -25px;
+}
+
+.categ__icon--1 {
+	width: 22px;
+	height: 10px;
+	background-position-x: -17px; 
+}
+
+
 @media screen and (max-width: 1050px) {
 	.categ__list {
 		width: 50%;
