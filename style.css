@@ -87,6 +87,8 @@
 
 	background-image: url(icon-sprite.png);
 	background-repeat: no-repeat;
+	width: 23px;
+	height: 23px;
 
 }
 
@@ -95,11 +97,13 @@
 }
 
 .categ__icon--1 {
-	width: 22px;
-	height: 10px;
-	background-position-x: -17px; 
+	width: 23px;
+	height: 23px;
+	background-position-x: -46px; 
 }
-
+.categ__icon--2 {
+	background-position-x: -69px; 
+}
 
 @media screen and (max-width: 1050px) {
 	.categ__list {
