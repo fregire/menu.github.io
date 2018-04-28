@@ -13,7 +13,6 @@
 	font-size: 14px;
 	color: #fff;
 	
-	padding-bottom: 50px;
 	background-color: #4a505f;
 }
 .categ__header {
@@ -25,9 +24,14 @@
 	position: relative;
 	margin: 0;
 	padding-left: 29px;
+	width: 200px;
 
 	font-size: 18px;
 	line-height: 50px;
+}
+.categ__headline:hover ~ .categ__menu,
+.categ__menu:hover {
+	display: block;
 }
 .categ__headline:before {
 	position: absolute;
