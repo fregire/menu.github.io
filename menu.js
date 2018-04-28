@@ -1,5 +1,5 @@
 var menuBtn = document.querySelector(".categ__headline"),
-			menu = document.querySelector(".categ__menu");
+	menu = document.querySelector(".categ__menu");
 
 menu.classList.remove("categ__menu--nojs");
 menuBtn.addEventListener("click", function() {
