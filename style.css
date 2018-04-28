@@ -70,45 +70,39 @@
 	top: 50px;
 	left: 0;
 	right: 0;
-	
+
 	height: 0;
 	overflow: hidden;
 	
-	-webkit-transition: all 400ms;
+	-webkit-transition: height 400ms;
 	
-	-o-transition: all 400ms;
+	-o-transition: height 400ms;
 	
-	transition: all 400ms;
+	transition: height 400ms;
 	background-color: #4a505f;
 }
 .categ__menu--nojs {
 	position: static;
 	height: auto;
 }
-.categ__inner--menu {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	margin-top: 17px;
+.categ__line {
+	position: absolute;
 }
-.categ__list {
-	padding: 0;
-	margin: 0;
-	border-left: 1px solid #585d69;
+.menu-list {
+	padding: 0 15px;
+	max-width: 1260px;
+	height: 350px;
+	margin: 0 auto;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 	list-style: none;
 }
-.categ__list:first-child {
-	border-left: none;
-}
-.categ__item {
+.menu-list__item {
 	width: 24.95934959349593%;
 }
-.categ__link {
+.menu-list__link {
 	position: relative;
 
 	display: inline-block;
@@ -127,13 +121,13 @@
 
 	transition: all 100ms;
 }
-.categ__link:hover {
+.menu-list__link:hover {
 	background-color: #545c6e;
 	cursor: pointer;
 	border-left: 1px solid #e66a86;
 	color: #e66a86;
 }
-.categ__icon {
+.menu-list__icon {
 	position: absolute;
 	left: 14px;
 	top: 50%;
@@ -151,98 +145,98 @@
 
 }
 
-.categ__link:hover .categ__icon {
+.menu-list__link:hover .menu-list__icon {
 	background-position-y: -25px;
 }
 
-.categ__icon--1 {
+.menu-list__icon--1 {
 	background-position-x: 0; 
 	height: 10px;
 }
-.categ__icon--2 {
+.menu-list__icon--2 {
 	background-position-x: -23px; 
 }
-.categ__icon--3 {
+.menu-list__icon--3 {
 	background-position-x: -46px;
 	left: 18px;
 }
-.categ__icon--4 {
+.menu-list__icon--4 {
 	background-position-x: -69px;
 }
-.categ__icon--5 {
+.menu-list__icon--5 {
 	background-position-x: -92px;
 }
-.categ__icon--6 {
+.menu-list__icon--6 {
 	background-position-x: -115px;
 	left: 18px;
 }
-.categ__icon--7 {
+.menu-list__icon--7 {
 	background-position-x: -138px;
 	height: 17px;
 }
-.categ__icon--8 {
+.menu-list__icon--8 {
 	background-position-x: -161px;
 	height: 18px;
 	left: 17px;
 }
-.categ__icon--9 {
+.menu-list__icon--9 {
 	background-position-x: -184px;
 	height: 14px;
 }
-.categ__icon--10 {
+.menu-list__icon--10 {
 	background-position-x: -207px;
 }
-.categ__icon--11 {
+.menu-list__icon--11 {
 	background-position-x: -230px;
 	left: 16px;
 }
-.categ__icon--12 {
+.menu-list__icon--12 {
 	background-position-x: -253px;
 	height: 16px;
 }
-.categ__icon--13 {
+.menu-list__icon--13 {
 	background-position-x: -276px;
 	left: 17px;
 }
-.categ__icon--14 {
+.menu-list__icon--14 {
 	background-position-x: -299px;
 	height: 17px;
 }
-.categ__icon--15 {
+.menu-list__icon--15 {
 	background-position-x: -322px;
 	left: 17px;
 }
-.categ__icon--16 {
+.menu-list__icon--16 {
 	background-position-x: -345px;
 }
-.categ__icon--17 {
+.menu-list__icon--17 {
 	background-position-x: -368px;
 }
-.categ__icon--18 {
+.menu-list__icon--18 {
 	background-position-x: -391px;
 }
-.categ__icon--19 {
+.menu-list__icon--19 {
 	background-position-x: -414px;
 }
-.categ__icon--20 {
+.menu-list__icon--20 {
 	background-position-x: -437px;
 	left: 16px;
 	height: 12px;
 }
-.categ__icon--21 {
+.menu-list__icon--21 {
 	background-position-x: -460px;
 	height: 17px;
 }
-.categ__icon--22 {
+.menu-list__icon--22 {
 	background-position-x: -483px;
 }
-.categ__icon--23 {
+.menu-list__icon--23 {
 	background-position-x: -506px;
 }
-.categ__icon--24 {
+.menu-list__icon--24 {
 	background-position-x: -529px;
 }
-.categ__icon--25 {
+.menu-list__icon--25 {
 	background-position-x: -552px;
 	left: 16px;
 }
@@ -254,29 +248,28 @@
 	/* При наведении на бургер открывается меню */
 	.categ__headline:hover ~ .categ__menu,
 	.categ__menu:hover {
-		height: 400px;
+		height: 413px;
 	}
 }
 
 @media screen and (max-width: 899px) {
-	.categ__list {
+	.menu-list__item {
 		width: 50%;
 	}
-	.categ__list:nth-child(3) {
-		border-left: none;
-	}
-	.categ__menu--opened {
+	.categ__menu--opened,
+	.menu-list {
 		height: 750px;
 	}
 }
 @media screen and (max-width: 520px) {
-	.categ__list {
+	.menu-list__item {
 		width: 100%;
 	}
-	.categ__list {
-		border-left: 1px solid #585d69 !important;
+	.menu-list__item {
+		border-left: 1px solid #585d69;
 	}
-	.categ__menu--opened {
+	.categ__menu--opened,
+	.menu-list {
 		height: 1300px;
 	}
 }
