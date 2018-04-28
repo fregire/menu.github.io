@@ -1,12 +1,5 @@
-@font-face { 
-  font-family: 'Segoe UI'; 
-  src: url('fonts/ofont-ru-segoe-ui-semibold.woff2') format('woff2'), 
-       url('fonts/original-ofont-ru-segoe-ui-semibold.ttf')  format('truetype'), /* Только если нужна поддержка старых Android, иначе закомментировать */ 
-       url('fonts/ofont-ru-segoe-ui-semibold.woff') format('woff'); 
-  font-weight: normal; 
-  font-style: normal; 
-  font-display: swap;
-}
+
+/* Свойства для станицы, можно их не заливать на сайт */
 * {
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -16,6 +9,19 @@
 	padding: 0;
 
 }
+
+/* Основные свойства */
+
+@font-face { 
+  font-family: 'Segoe UI'; 
+  src: url('fonts/ofont-ru-segoe-ui-semibold.woff2') format('woff2'), 
+       url('fonts/original-ofont-ru-segoe-ui-semibold.ttf')  format('truetype'), /* Только если нужна поддержка старых Android, иначе закомментировать */ 
+       url('fonts/ofont-ru-segoe-ui-semibold.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal; 
+  font-display: swap;
+}
+
 .categ {
 	position: relative;
 
@@ -142,6 +148,10 @@
 	cursor: pointer;
 	border-left: 1px solid #e66a86;
 	color: #e66a86;
+}
+.menu-list__link--big-text {
+	padding-top: 5px;
+	line-height: 20px;
 }
 .menu-list__icon {
 	position: absolute;
