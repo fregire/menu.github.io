@@ -1,3 +1,12 @@
+@font-face { 
+  font-family: 'Segoe UI'; 
+  src: url('fonts/ofont-ru-segoe-ui-semibold.woff2') format('woff2'), 
+       url('fonts/original-ofont-ru-segoe-ui-semibold.ttf')  format('truetype'), /* Только если нужна поддержка старых Android, иначе закомментировать */ 
+       url('fonts/ofont-ru-segoe-ui-semibold.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal; 
+  font-display: swap;
+}
 * {
 	box-sizing: border-box;
 }
@@ -29,10 +38,6 @@
 	font-size: 18px;
 	line-height: 50px;
 }
-.categ__headline:hover ~ .categ__menu,
-.categ__menu:hover {
-	display: block;
-}
 .categ__headline:before {
 	position: absolute;
 	left: 0px;
@@ -63,11 +68,15 @@
 	left: 0;
 	right: 0;
 	
-	display: none;
-	padding-bottom: 36px;
-	min-height: 350px;
-
+	height: 0;
+	overflow: hidden;
+	
+	transition: all 400ms;
 	background-color: #4a505f;
+}
+.categ__menu--nojs {
+	position: static;
+	height: auto;
 }
 .categ__inner--menu {
 	display: flex;
@@ -130,12 +139,14 @@
 
 .categ__icon--1 {
 	background-position-x: 0; 
+	height: 10px;
 }
 .categ__icon--2 {
 	background-position-x: -23px; 
 }
 .categ__icon--3 {
 	background-position-x: -46px;
+	left: 18px;
 }
 .categ__icon--4 {
 	background-position-x: -69px;
@@ -145,33 +156,43 @@
 }
 .categ__icon--6 {
 	background-position-x: -115px;
+	left: 18px;
 }
 .categ__icon--7 {
 	background-position-x: -138px;
+	height: 17px;
 }
 .categ__icon--8 {
 	background-position-x: -161px;
+	height: 18px;
+	left: 17px;
 }
 .categ__icon--9 {
 	background-position-x: -184px;
+	height: 14px;
 }
 .categ__icon--10 {
 	background-position-x: -207px;
 }
 .categ__icon--11 {
 	background-position-x: -230px;
+	left: 16px;
 }
 .categ__icon--12 {
 	background-position-x: -253px;
+	height: 16px;
 }
 .categ__icon--13 {
 	background-position-x: -276px;
+	left: 17px;
 }
 .categ__icon--14 {
 	background-position-x: -299px;
+	height: 17px;
 }
 .categ__icon--15 {
 	background-position-x: -322px;
+	left: 17px;
 }
 .categ__icon--16 {
 	background-position-x: -345px;
@@ -187,9 +208,12 @@
 }
 .categ__icon--20 {
 	background-position-x: -437px;
+	left: 16px;
+	height: 12px;
 }
 .categ__icon--21 {
 	background-position-x: -460px;
+	height: 17px;
 }
 .categ__icon--22 {
 	background-position-x: -483px;
@@ -202,15 +226,29 @@
 }
 .categ__icon--25 {
 	background-position-x: -552px;
+	left: 16px;
 }
 
 
-@media screen and (max-width: 1050px) {
+/* Media */
+
+@media screen and (min-width: 900px) {
+	/* При наведении на бургер открывается меню */
+	.categ__headline:hover ~ .categ__menu,
+	.categ__menu:hover {
+		height: 400px;
+	}
+}
+
+@media screen and (max-width: 899px) {
 	.categ__list {
 		width: 50%;
 	}
 	.categ__list:nth-child(3) {
 		border-left: none;
+	}
+	.categ__menu--opened {
+		height: 750px;
 	}
 }
 @media screen and (max-width: 520px) {
@@ -219,5 +257,8 @@
 	}
 	.categ__list {
 		border-left: 1px solid #585d69 !important;
+	}
+	.categ__menu--opened {
+		height: 1300px;
 	}
 }
