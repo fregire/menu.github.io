@@ -47,7 +47,6 @@
 .categ__headline:hover {
 	cursor: pointer;
 }
-.categ__menu,
 .categ__inner {
 	max-width: 1260px;
 	padding-left: 15px;
@@ -59,17 +58,18 @@
 	top: 50px;
 	left: 0;
 	right: 0;
-
-	height: 350px;
-
-	display: flex;
-	justify-content: space-between;
+	
+	display: none;
+	padding-bottom: 36px;
 	min-height: 350px;
-	flex-wrap: wrap;
-	margin-top: 17px;
-
 
 	background-color: #4a505f;
+}
+.categ__inner--menu {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 17px;
 }
 .categ__list {
 	padding: 0;
