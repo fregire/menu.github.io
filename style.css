@@ -278,6 +278,13 @@
 	.categ__menu:hover {
 		height: 413px;
 	}
+	.categ__headline:hover ~ .categ__menu--extended,
+	.categ__menu--extended:hover {
+		height: 600px;
+	}
+	.menu-list--extended {
+		height: 550px;
+	}
 }
 
 @media screen and (max-width: 899px) {
@@ -287,6 +294,9 @@
 	.categ__menu--opened,
 	.menu-list {
 		height: 750px;
+	}
+	.menu-list--extended {
+		height: 900px;
 	}
 	.menu-list__item:nth-child(8),
 	.menu-list__item:nth-child(9),
@@ -309,5 +319,11 @@
 	.categ__menu--opened,
 	.menu-list {
 		height: 1300px;
+	}
+	.categ__menu--extended {
+		height: 1700px;
+	}
+	.menu-list--extended {
+		height: 1600px;
 	}
 }
