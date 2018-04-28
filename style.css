@@ -7,6 +7,8 @@
 
 }
 .categ {
+	position: relative;
+
 	font-family: "Segoe UI", Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
 	font-size: 14px;
 	color: #fff;
@@ -20,13 +22,31 @@
 	background-color: #414755;
 }
 .categ__headline {
+	position: relative;
 	margin: 0;
 	padding-left: 29px;
 
 	font-size: 18px;
 	line-height: 50px;
 }
+.categ__headline:before {
+	position: absolute;
+	left: 0px;
+	top: 51%;
+	transform: translate(0, -50%);
 
+	display: block;
+	content: "";
+
+	background-image: url(icon-sprite.png);
+	background-repeat: no-repeat;
+	background-position-x: -575px;
+	width: 15px;
+	height: 10px;
+}
+.categ__headline:hover {
+	cursor: pointer;
+}
 .categ__menu,
 .categ__inner {
 	max-width: 1260px;
@@ -35,13 +55,21 @@
 	margin: 0 auto;
 }
 .categ__menu {
-	position: relative;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+
+	height: 350px;
 
 	display: flex;
 	justify-content: space-between;
 	min-height: 350px;
 	flex-wrap: wrap;
 	margin-top: 17px;
+
+
+	background-color: #4a505f;
 }
 .categ__list {
 	padding: 0;
@@ -97,13 +125,81 @@
 }
 
 .categ__icon--1 {
-	width: 23px;
-	height: 23px;
-	background-position-x: -46px; 
+	background-position-x: 0; 
 }
 .categ__icon--2 {
-	background-position-x: -69px; 
+	background-position-x: -23px; 
 }
+.categ__icon--3 {
+	background-position-x: -46px;
+}
+.categ__icon--4 {
+	background-position-x: -69px;
+}
+.categ__icon--5 {
+	background-position-x: -92px;
+}
+.categ__icon--6 {
+	background-position-x: -115px;
+}
+.categ__icon--7 {
+	background-position-x: -138px;
+}
+.categ__icon--8 {
+	background-position-x: -161px;
+}
+.categ__icon--9 {
+	background-position-x: -184px;
+}
+.categ__icon--10 {
+	background-position-x: -207px;
+}
+.categ__icon--11 {
+	background-position-x: -230px;
+}
+.categ__icon--12 {
+	background-position-x: -253px;
+}
+.categ__icon--13 {
+	background-position-x: -276px;
+}
+.categ__icon--14 {
+	background-position-x: -299px;
+}
+.categ__icon--15 {
+	background-position-x: -322px;
+}
+.categ__icon--16 {
+	background-position-x: -345px;
+}
+.categ__icon--17 {
+	background-position-x: -368px;
+}
+.categ__icon--18 {
+	background-position-x: -391px;
+}
+.categ__icon--19 {
+	background-position-x: -414px;
+}
+.categ__icon--20 {
+	background-position-x: -437px;
+}
+.categ__icon--21 {
+	background-position-x: -460px;
+}
+.categ__icon--22 {
+	background-position-x: -483px;
+}
+.categ__icon--23 {
+	background-position-x: -506px;
+}
+.categ__icon--24 {
+	background-position-x: -529px;
+}
+.categ__icon--25 {
+	background-position-x: -552px;
+}
+
 
 @media screen and (max-width: 1050px) {
 	.categ__list {
